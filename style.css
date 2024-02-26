@@ -8,46 +8,38 @@
 }
 
 header {
-	width: 940px;
-	height: 40px;
+	width: 1440px;
+	height: 74px;
+}
+
+.top_nav {
 	margin-top: 17px;
-	margin-left: 250px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	margin-left: 250px ;
 
 }
 
 .top_logo {
-	font-family: 'Lora', sans-serif;
-	font-size: 26px;
-	font-weight: 400;
-	line-height: 26px;
-	letter-spacing: 0em;
-	text-align: left;
-	width: 92px;
-	height: 26px;
-	margin-top: 3px;
-	margin-bottom: 11px;
-	text-decoration: none;
-	color: #2E2E2E;
-
+	vertical-align: bottom;
+	margin-bottom: 5px;
 }
 
-.top_nav li {
-	list-style-type: none;
-	display: inline;
+.top_nav_ul {
+	display: inline-block;
+	margin-left: 470px;
+}
+
+.top_nav_ul li {
+	vertical-align: 0.5;
+	display: inline-block;
+	margin: 10px 20px;
 	font-family: 'Oxygen', sans-serif;
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 20px;
 	letter-spacing: 0.6px;
 	text-align: left;
-	text-decoration: none;
-	color: #2E2E2E;
-	text-transform: uppercase ;
-	margin-left: 40px;
-
+	text-transform: uppercase;
+	
 }
 
 .upper {
@@ -121,14 +113,9 @@ header {
 	
 }
 
-.foot {
-	width: 960px;
-	height: 34px;
+.bottom_nav {
 	margin-top: 28px;
 	margin-left: 240px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 
 }
 
@@ -137,7 +124,7 @@ footer {
 	width: 1440px;
 	height: 89px;
 	background: rgba(35, 47, 56, 0.6);
-	background-blend-mode: multiply;
+	background-blend-mode: overlay;
 	background-image:url(background.png);
 	background-position: center;
 	background-size: 100%;
@@ -147,35 +134,30 @@ footer {
 }
 
 .bottom_logo {
-	font-family: 'Lora', sans-serif;
-	font-size: 26px;
-	font-weight: 400;
-	line-height: 26px;
-	letter-spacing: 0em;
-	text-align: left;
-	width: 92px;
-	height: 26px;
-	margin-top: 3px;
-	margin-left: 10px;
+	vertical-align: bottom;
 	margin-bottom: 5px;
-	text-decoration: none;
-	color: rgb(255, 255, 255);
-	
+
 }
 
-.bottom_nav li {
-	list-style-type: none;
+.bottom_nav_ul {
+	display: inline-block;
+	margin-left: 500px;
+}
+
+.bottom_nav_ul li {
 	display: inline;
-	font-family: 'Oxygen', sans-serif;
-	font-size: 11px;
-	font-weight: 400;
-	line-height: 26px;
-	letter-spacing: 1px;
-	text-align: right;
-	text-decoration: none;
 	color: rgba(255, 255, 255, 0.6);
-	text-transform: uppercase ;
-	margin-left: 40px;
+	vertical-align: 0.5;
+	display: inline-block;
+	margin: 10px 20px;
+	font-family: 'Oxygen', sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: 0.6px;
+	text-align: left;
+	text-transform: uppercase;
+	
 
 }
 

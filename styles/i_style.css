@@ -5,7 +5,6 @@
 
 
 *{
-	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 
@@ -16,7 +15,7 @@
 	justify-content: space-between;
 	width: 65%;
 	margin: 0px auto;
-	margin-top: 20px;
+	padding-top: 20px;
 	overflow: hidden;
 	
 }

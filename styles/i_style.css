@@ -15,7 +15,7 @@
 	display: flex;
 	justify-content: space-between;
 	width: 65%;
-	margin: auto;
+	margin: 0px auto;
 	margin-top: 20px;
 	overflow: hidden;
 	
@@ -95,9 +95,5 @@
 	border: none;
 
 
-}
-
-.main-navigation {
-	
 }
 

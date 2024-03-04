@@ -9,7 +9,7 @@
 <body>
 	
 	<header class="header">
-		<div class="header-section">
+		<nav class="header-section">
 			<img class="header-section__image" src="image/logo_w.svg">
 			<ul class="header-section__links">
 				<li>Home</li>
@@ -17,20 +17,19 @@
 				<li>About</li>
 				<li>Contact</li>
 			</ul>
-		</div>
+		</nav>
 	</header>
 
-	<main> 
+	<main class="main"> 
 		<div class="main-title">
-			<img src="image/mountains.png" class="main-title__image">
 			<div class="main-title__text">
 				<h1>Let's do it together.</h1>
 				<h2>We travel the world in search of stories. Come along for the ride.</h2>
-				<button type="button" class="main-title__button--view">View Latest Posts</button>
+				<button type="button" class="main-title__button--view">View Latest Posts</button> <!-- Заменить на a  -->
 			</div>
 		</div>
 
-		 <div class="main-navigation"> 
+		 <nav class="main-navigation"> 
 			<ul class="main-navigation__links">
 				<li>Nature</li>
 				<li>Photography</li>
@@ -39,6 +38,43 @@
 				<li>Travel</li>
 				<li>Adventure</li>
 			</ul>
+		</nav>
+
+		<div class="main-container">
+			<div class="main-container__featured">
+				<h3 class="featured__title">Featured Posts</h3>
+				<div class="rectangle"></div>
+				<div class="featured-content">
+					<div class="featured-content__item1">
+						<a href="#" class="item1__link">Photography</a>
+						<div class="item__content">
+							<p class="item__naming">The Road Ahead</p>
+							<p	class="item__description">The road ahead might be paved - it might not be.</p>
+							<div class="item__information">
+								<div class="item__autor">
+									<img src="/image/avatar1.png" class="autor__icon">
+									<p class="autor__name">Mat Vogels</p>
+								</div>
+								<p class="item__date">September 25, 2015</p>
+							</div>
+						</div>
+					</div>
+					<div class="featured-content__item2">
+						<a href="#" class="item2__link">Adventure</a>
+						<div class="item__content">
+							<p class="item__naming">From Top Down</p>
+							<p	class="item__description">Once a year, go someplace you’ve never been before.</p>
+							<div class="item__information">
+								<div class="item__autor">
+									<img src="/image/avatar2.png" class="autor__icon">
+									<p class="autor__name">William Wong</p>
+								</div>
+								<p class="item__date">September 25, 2015</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</main>
 

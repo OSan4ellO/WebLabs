@@ -5,12 +5,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Lab_2</title>
 	<link rel="stylesheet" href="styles/i_style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 	
 	<header class="header">
 		<nav class="header-section">
-			<img class="header-section__image" src="image/logo_w.svg">
+			<img class="header-section__image" src="image/logo_w.svg" alt="Escape">
 			<ul class="header-section__links">
 				<li>Home</li>
 				<li>Categories</li>
@@ -25,7 +28,7 @@
 			<div class="main-title__text">
 				<h1>Let's do it together.</h1>
 				<h2>We travel the world in search of stories. Come along for the ride.</h2>
-				<button type="button" class="main-title__button--view">View Latest Posts</button> <!-- Заменить на a  -->
+				<a class="main__button--view" href="#">View Latest Posts</a> 
 			</div>
 		</div>
 
@@ -42,44 +45,157 @@
 
 		<div class="main-container">
 			<div class="main-container__featured">
-				<h3 class="featured__title">Featured Posts</h3>
+				<h3 class="featured__title container-title">Featured Posts</h3>
 				<div class="rectangle"></div>
 				<div class="featured-content">
-					<div class="featured-content__item1">
-						<a href="#" class="item1__link">Photography</a>
-						<div class="item__content">
-							<p class="item__naming">The Road Ahead</p>
-							<p	class="item__description">The road ahead might be paved - it might not be.</p>
-							<div class="item__information">
-								<div class="item__autor">
-									<img src="/image/avatar1.png" class="autor__icon">
-									<p class="autor__name">Mat Vogels</p>
+					<div class="featured-content__item1 featured__item">
+						<a class="feautered-item1__link" href="#">Photography</a>
+						<div class="feautered-item__content">
+							<p class="feautered-item__naming">The Road Ahead</p>
+							<p	class="feautered-item__description">The road ahead might be paved - it might not be.</p>
+							<div class="feautered-item__information">
+								<div class="feautered-item__autor">
+									<img class="feautered-autor__icon" src="/image/avatar1.png" alt="author_photo">
+									<p class="feautered-autor__name">Mat Vogels</p>
 								</div>
-								<p class="item__date">September 25, 2015</p>
+								<p class="feautered-item__date">September 25, 2015</p>
 							</div>
 						</div>
 					</div>
-					<div class="featured-content__item2">
-						<a href="#" class="item2__link">Adventure</a>
-						<div class="item__content">
-							<p class="item__naming">From Top Down</p>
-							<p	class="item__description">Once a year, go someplace you’ve never been before.</p>
-							<div class="item__information">
-								<div class="item__autor">
-									<img src="/image/avatar2.png" class="autor__icon">
-									<p class="autor__name">William Wong</p>
+					<div class="featured-content__item2 featured-item">
+						<a class="feautered-item2__link" href="#">Adventure</a>
+						<div class="feautered-item__content">
+							<p class="feautered-item__naming">From Top Down</p>
+							<p	class="feautered-item__description">Once a year, go someplace you’ve never been before.</p>
+							<div class="feautered-item__information">
+								<div class="feautered-item__autor">
+									<img class="feautered-autor__icon" src="/image/avatar2.png" alt="author_photo" >
+									<p class="feautered-autor__name">William Wong</p>
 								</div>
-								<p class="item__date">September 25, 2015</p>
+								<p class="feautered-item__date">September 25, 2015</p>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="main-container__recent">
+				<div>
+					<h3 class="recent__title container-title">Most Recent</h3>
+					<div class="rectangle"></div>
+					<div class="recent__content">
+
+						<div class="recent-content__item1 recent__item">
+							<div class="recent-item__image recent_image1"></div>
+							<div class="recent-item__description">
+								<p class="recent-item__title">Still Standing Tall</p>
+								<p class="recent-item__subtitle">Life begins at the end of your comfort zone.</p>
+							</div>
+							<div class="recent-item__information">
+								<div class="recent-item__autor">
+									<img class="item-autor__avatar" src="./image/avatar2.png" alt="author_photo">
+									<p class="recent-autor_name">William Wong</p>
+								</div>
+									<p class="recent-autor_date">9/25/2015</p>
+							</div>
+						</div>
+
+						<div class="recent-content__item2 recent__item">
+							<div class="recent-item__image recent_image2">
+							</div>
+							<div class="recent-item__description">
+								<p class="recent-item__title">Sunny Side Up</p>
+								<p class="recent-item__subtitle">No place is ever as bad as they tell you it’s going to be.</p>
+							</div>
+							<div class="recent-item__information">
+								<div class="recent-item__autor">
+									<img class="item-autor__avatar" src="./image/avatar1.png" alt="author_photo">
+									<p class="recent-autor_name">Mat Vogels</p>
+								</div>
+									<p class="recent-autor_date">9/25/2015</p>
+							</div>
+						</div>
+
+						<div class="recent-content__item3 recent__item">
+							<div class="recent-item__image recent_image3">
+							</div>
+							<div class="recent-item__description">
+								<p class="recent-item__title">Water Falls</p>
+								<p class="recent-item__subtitle">We travel not to escape life, but for life not to escape us.</p>
+							</div>
+							<div class="recent-item__information">
+								<div class="recent-item__autor">
+									<img class="item-autor__avatar" src="./image/avatar1.png" alt="author_photo">
+									<p class="recent-autor_name">Mat Vogels</p>
+								</div>
+									<p class="recent-autor_date">9/25/2015</p>
+							</div>
+						</div>
+
+						<div class="recent-content__item4 recent__item">
+							<div class="recent-item__image recent_image4">
+							</div>
+							<div class="recent-item__description">
+								<p class="recent-item__title">Through the Mist</p>
+								<p class="recent-item__subtitle">Travel makes you see what a tiny place you occupy in the world.</p>
+							</div>
+							<div class="recent-item__information">
+								<div class="recent-item__autor">
+									<img class="item-autor__avatar" src="./image/avatar2.png" alt="author_photo">
+									<p class="recent-autor_name">William Wong</p>
+								</div>
+									<p class="recent-autor_date">9/25/2015</p>
+							</div>
+						</div>
+
+						<div class="recent-content__item5 recent__item">
+							<div class="recent-item__image recent_image5">
+							</div>
+							<div class="recent-item__description">
+								<p class="recent-item__title">Awaken Early</p>
+								<p class="recent-item__subtitle">Not all those who wander are lost.</p>
+							</div>
+							<div class="recent-item__information">
+								<div class="recent-item__autor">
+									<img class="item-autor__avatar" src="./image/avatar1.png" alt="author_photo">
+									<p class="recent-autor_name">Mat Vogels</p>
+								</div>
+									<p class="recent-autor_date">9/25/2015</p>
+							</div>
+						</div>
+						
+						<div class="recent-content__item6 recent__item">
+							<div class="recent-item__image recent_image6">
+							</div>
+							<div class="recent-item__description">
+								<p class="recent-item__title">Try it Always</p>
+								<p class="recent-item__subtitle">The world is a book, and those who do not travel read only one page.</p>
+							</div>
+							<div class="recent-item__information">
+								<div class="recent-item__autor">
+									<img class="item-autor__avatar" src="./image/avatar1.png" alt="author_photo">
+									<p class="recent-autor_name">Mat Vogels</p>
+								</div>
+								<p class="recent-autor_date">9/25/2015</p>
+							</div>
+						</div>
+
 					</div>
 				</div>
 			</div>
 		</div>
 	</main>
 
-	<footer>
-
+	<footer class="footer">
+		<nav class="footer-section">
+			<img class="footer-section__image" src="image/logo_w.svg">
+			<ul class="footer-section__links">
+				<li>Home</li>
+				<li>Categories</li>
+				<li>About</li>
+				<li>Contact</li>
+			</ul>
+		</nav>
 	</footer>
 
 </body>

@@ -31,6 +31,7 @@
 
 .main__container {
 	background-color: rgba(247, 247, 247, 1);
+	padding-bottom: 89px;
 }
 
 .main-title {
@@ -464,7 +465,7 @@
 	background-image: url('../image/background.jpg');
 	background-blend-mode: overlay;
 	background-position: center;
-	margin-top: 89px;
+	
 
 }
 

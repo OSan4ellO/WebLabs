@@ -1,3 +1,27 @@
+<?php 
+$posts = [
+ [
+   'title' => 'The Road Ahead',
+   'subtitle' => 'The road ahead might be paved - it might not be.',
+   'img_modifier' => 'mat_avatar.png',
+   'author' => 'Mat Vogels',
+	'button' => 'Photography',
+	'item_num' => 'item1',
+	'date' => 'September 25, 2015',
+   // другие свойства этого поста
+ ],
+ [
+	'title' => 'From Top Down',
+   'subtitle' => 'Once a year, go someplace you’ve never been before.',
+   'img_modifier' => 'william_avatar.png',
+   'author' => 'William Wong',
+	'button' => 'Adventure',
+	'item_num' => 'item2',
+	'date' => 'September 25, 2015',
+   // свойства второго поста
+ ],
+];
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -56,49 +80,16 @@
             <h3 class="featured__title content-title">Featured Posts</h3>
             <div class="rectangle"></div>
             <div class="featured-content">
-              <div class="featured-content__item1 featured__item">
-                <a class="feautered-item1__link" href="#">Photography</a>
-                <div class="feautered-item__content">
-                  <p class="feautered-item__naming">The Road Ahead</p>
-                  <p class="feautered-item__description">
-                    The road ahead might be paved - it might not be.
-                  </p>
-                  <div class="feautered-item__information">
-                    <div class="feautered-item__autor">
-                      <img
-                        class="feautered-autor__icon"
-                        src="/image/mat_avatar.png"
-                        alt="author_photo"
-                      />
-                      <p class="feautered-autor__name">Mat Vogels</p>
-                    </div>
-                    <p class="feautered-item__date">September 25, 2015</p>
-                  </div>
-                </div>
-              </div>
-              <div class="featured-content__item2 featured-item">
-                <a class="feautered-item2__link" href="#">Adventure</a>
-                <div class="feautered-item__content">
-                  <p class="feautered-item__naming">From Top Down</p>
-                  <p class="feautered-item__description">
-                    Once a year, go someplace you’ve never been before.
-                  </p>
-                  <div class="feautered-item__information">
-                    <div class="feautered-item__autor">
-                      <img
-                        class="feautered-autor__icon"
-                        src="/image/william_avatar.png"
-                        alt="author_photo"
-                      />
-                      <p class="feautered-autor__name">William Wong</p>
-                    </div>
-                    <p class="feautered-item__date">September 25, 2015</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
+				<?php 
+   			foreach ($posts as $post) {
+       		include 'post_preview.php';
+    			 }
+    			?>
+
+            
+				</div>
+          </div>
           <div class="main-content__recent">
             <div>
               <h3 class="recent__title content-title">Most Recent</h3>

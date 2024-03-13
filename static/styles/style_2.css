@@ -158,6 +158,14 @@
   background-size: cover;
 }
 
+.featured-content__item2 {
+	max-width: 460px;
+	max-height: 280px;
+	background: url("../image/f_item2.png");
+	background-size: cover;
+	flex-grow: 1;
+ }
+
 .feautered-item1__link {
   display: inline-block;
   margin: 20px 0 0 20px;
@@ -173,14 +181,6 @@
   letter-spacing: 0;
   text-align: left;
   text-transform: uppercase;
-}
-
-.featured-content__item2 {
-  max-width: 460px;
-  max-height: 280px;
-  background: url("../image/f_item2.png");
-  background-size: cover;
-  flex-grow: 1;
 }
 
 .feautered-item2__link {

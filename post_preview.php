@@ -1,5 +1,5 @@
 <div class="featured-content__<?= $post['item_num'] ?> featured__item">
-	<a class="feautered-<?= $post['item_num'] ?>__link" href="#">
+	<a class="feautered-<?= $post['item_num'] ?>__link" href="<?= $post['button_link'] ?>">
 		<?= $post['button'] ?>
 	</a>
 	<div class="feautered-item__content">

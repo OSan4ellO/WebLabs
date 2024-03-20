@@ -32,7 +32,7 @@
 }
 
 .main-title {
-  background-image: url("../image/mountains.jpg");
+  background-image: url("../images/mountains.jpg");
   background-position: center;
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: overlay;
@@ -154,17 +154,17 @@
   max-width: 460px;
   max-height: 280px;
   flex-grow: 1;
-  background: url("../image/f_item1.png");
+  background: url("../images/f_item1.png");
   background-size: cover;
 }
 
 .featured-content__item2 {
-	max-width: 460px;
-	max-height: 280px;
-	background: url("../image/f_item2.png");
-	background-size: cover;
-	flex-grow: 1;
- }
+  max-width: 460px;
+  max-height: 280px;
+  background: url("../images/f_item2.png");
+  background-size: cover;
+  flex-grow: 1;
+}
 
 .feautered-item1__link {
   display: inline-block;
@@ -283,37 +283,37 @@
 }
 
 .recent_image1 {
-  background-image: url("/image/r_item1.png");
+  background-image: url("/images/r_item1.png");
   background-size: cover;
   padding-top: 150px;
 }
 
 .recent_image2 {
-  background-image: url("/image/r_item2.png");
+  background-image: url("/images/r_item2.png");
   background-size: cover;
   padding-top: 150px;
 }
 
 .recent_image3 {
-  background-image: url("/image/r_item3.png");
+  background-image: url("/images/r_item3.png");
   background-size: cover;
   padding-top: 150px;
 }
 
 .recent_image4 {
-  background-image: url("/image/r_item4.png");
+  background-image: url("/images/r_item4.png");
   background-size: cover;
   padding-top: 150px;
 }
 
 .recent_image5 {
-  background-image: url("/image/r_item5.png");
+  background-image: url("/images/r_item5.png");
   background-size: cover;
   padding-top: 150px;
 }
 
 .recent_image6 {
-  background-image: url("/image/r_item6.png");
+  background-image: url("/images/r_item6.png");
   background-size: cover;
   padding-top: 150px;
 }
@@ -386,7 +386,7 @@
 
 .footer {
   background-color: rgba(77, 86, 93, 1);
-  background-image: url("../image/background.jpg");
+  background-image: url("../images/background.jpg");
   background-blend-mode: overlay;
   background-position: center;
 }

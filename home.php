@@ -1,27 +1,27 @@
-<?php 
+<?php
 $posts = [
- [
-   'title' => 'The Road Ahead',
-   'subtitle' => 'The road ahead might be paved - it might not be.',
-   'img_modifier' => 'mat_avatar.png',
-   'author' => 'Mat Vogels',
-	'button' => 'Photography',
-	'item_num' => 'item1',
-	'date' => 'September 25, 2015',
-	'button_link' => 'post.php',
-   // другие свойства этого поста
- ],
- [
-	'title' => 'From Top Down',
-   'subtitle' => 'Once a year, go someplace you’ve never been before.',
-   'img_modifier' => 'william_avatar.png',
-   'author' => 'William Wong',
-	'button' => 'Adventure',
-	'item_num' => 'item2',
-	'date' => 'September 25, 2015',
-	'button_link' => '',
-   // свойства второго поста
- ],
+	[
+		'title' => 'The Road Ahead',
+		'subtitle' => 'The road ahead might be paved - it might not be.',
+		'img_modifier' => 'mat_avatar.png',
+		'author' => 'Mat Vogels',
+		'button' => 'Photography',
+		'id' => '1',
+		'date' => 'September 25, 2015',
+		'button_link' => 'post.php',
+		// другие свойства этого поста
+	],
+	[
+		'title' => 'From Top Down',
+		'subtitle' => 'Once a year, go someplace you’ve never been before.',
+		'img_modifier' => 'william_avatar.png',
+		'author' => 'William Wong',
+		'button' => 'Adventure',
+		'id' => '2',
+		'date' => 'September 25, 2015',
+		'button_link' => '',
+		// свойства второго поста
+	],
 ];
 ?>
 <!DOCTYPE html>
@@ -31,7 +31,7 @@ $posts = [
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Lab_2</title>
-	<link rel="stylesheet" href="styles/style_2.css" />
+	<link rel="stylesheet" href="styles/home-style.css" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
@@ -42,7 +42,7 @@ $posts = [
 <body>
 	<header class="header">
 		<nav class="navigation-section">
-			<img class="header-navigation__image" src="image/logo_w.svg" alt="Escape" />
+			<img class="header-navigation__image" src="/images/logo_w.svg" alt="Escape" />
 			<ul class="header-navigation__links">
 				<li>Home</li>
 				<li>Categories</li>
@@ -79,14 +79,11 @@ $posts = [
 					<h3 class="featured__title content-title">Featured Posts</h3>
 					<div class="rectangle"></div>
 					<div class="featured-content">
-
-						<?php 
-   			foreach ($posts as $post) {
-       		include 'post_preview.php';
-    			 }
-    			?>
-
-
+						<?php
+						foreach ($posts as $post) {
+							include 'post_preview.php';
+						}
+						?>
 					</div>
 				</div>
 				<div class="main-content__recent">
@@ -104,7 +101,7 @@ $posts = [
 								</div>
 								<div class="recent-item__information">
 									<div class="recent-item__autor">
-										<img class="item-autor__avatar" src="./image/william_avatar.png" alt="author_photo" />
+										<img class="item-autor__avatar" src="./images/william_avatar.png" alt="author_photo" />
 										<p class="recent-autor_name">William Wong</p>
 									</div>
 									<p class="recent-autor_date">9/25/2015</p>
@@ -121,7 +118,7 @@ $posts = [
 								</div>
 								<div class="recent-item__information">
 									<div class="recent-item__autor">
-										<img class="item-autor__avatar" src="./image/mat_avatar.png" alt="author_photo" />
+										<img class="item-autor__avatar" src="./images/mat_avatar.png" alt="author_photo" />
 										<p class="recent-autor_name">Mat Vogels</p>
 									</div>
 									<p class="recent-autor_date">9/25/2015</p>
@@ -139,7 +136,7 @@ $posts = [
 								</div>
 								<div class="recent-item__information">
 									<div class="recent-item__autor">
-										<img class="item-autor__avatar" src="./image/mat_avatar.png" alt="author_photo" />
+										<img class="item-autor__avatar" src="./images/mat_avatar.png" alt="author_photo" />
 										<p class="recent-autor_name">Mat Vogels</p>
 									</div>
 									<p class="recent-autor_date">9/25/2015</p>
@@ -157,7 +154,7 @@ $posts = [
 								</div>
 								<div class="recent-item__information">
 									<div class="recent-item__autor">
-										<img class="item-autor__avatar" src="./image/william_avatar.png" alt="author_photo" />
+										<img class="item-autor__avatar" src="./images/william_avatar.png" alt="author_photo" />
 										<p class="recent-autor_name">William Wong</p>
 									</div>
 									<p class="recent-autor_date">9/25/2015</p>
@@ -174,7 +171,7 @@ $posts = [
 								</div>
 								<div class="recent-item__information">
 									<div class="recent-item__autor">
-										<img class="item-autor__avatar" src="./image/mat_avatar.png" alt="author_photo" />
+										<img class="item-autor__avatar" src="./images/mat_avatar.png" alt="author_photo" />
 										<p class="recent-autor_name">Mat Vogels</p>
 									</div>
 									<p class="recent-autor_date">9/25/2015</p>
@@ -192,7 +189,7 @@ $posts = [
 								</div>
 								<div class="recent-item__information">
 									<div class="recent-item__autor">
-										<img class="item-autor__avatar" src="./image/mat_avatar.png" alt="author_photo" />
+										<img class="item-autor__avatar" src="./images/mat_avatar.png" alt="author_photo" />
 										<p class="recent-autor_name">Mat Vogels</p>
 									</div>
 									<p class="recent-autor_date">9/25/2015</p>
@@ -207,7 +204,7 @@ $posts = [
 
 	<footer class="footer">
 		<nav class="footer-section">
-			<img class="footer-section__image" src="image/logo_w.svg" alt="Escape" />
+			<img class="footer-section__image" src="images/logo_w.svg" alt="Escape" />
 			<ul class="footer-section__links">
 				<li>Home</li>
 				<li>Categories</li>

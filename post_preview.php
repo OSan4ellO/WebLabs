@@ -1,10 +1,10 @@
-<div class="featured-content__<?= $post['item_num'] ?> featured__item">
-	<a class="feautered-<?= $post['item_num'] ?>__link" href="<?= $post['button_link'] ?>">
+<div class="featured-content__item<?= $post['id'] ?> featured__item">
+	<a class="feautered-item<?= $post['id'] ?>__link" href="<?= $post['button_link'] ?>">
 		<?= $post['button'] ?>
 	</a>
 	<div class="feautered-item__content">
 		<p class="feautered-item__naming">
-			<?= $post['title'] ?>
+			<?= $post['title'] ?>2
 		</p>
 		<p class="feautered-item__description">
 			<?= $post['subtitle'] ?>

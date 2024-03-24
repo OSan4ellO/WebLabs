@@ -11,7 +11,7 @@
 		</p>
 		<div class="feautered-item__information">
 			<div class="feautered-item__autor">
-				<img class="feautered-autor__icon" src="/image/<?= $post['img_modifier'] ?>" alt="author_photo">
+				<img class="feautered-autor__icon" src="./images/<?= $post['img_modifier'] ?>" alt="author_photo">
 				<p class="feautered-autor__name">
 					<?= $post['author'] ?>
 				</p>

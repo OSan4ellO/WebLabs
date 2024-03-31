@@ -8,6 +8,7 @@
 
 .header-navigation {
   margin-left: 250px;
+  margin-top: 17px;
 }
 
 .header-logo {
@@ -17,7 +18,7 @@
 
 .header-list {
   display: inline-block;
-  margin-left: 470px;
+  margin-left: 500px;
 }
 
 .header-list li {

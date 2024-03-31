@@ -1,37 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Lab</title>
-	<link rel="stylesheet" href="styles/post-style.css" />
-</head>
-
-<body>
-	<header class="header">
-		<div class="header-navigation">
-			<img class="header-logo" src="images/logo_b.svg" />
-			<ul class="header-list">
-				<li>Home</li>
-				<li>Categories</li>
-				<li>About</li>
-				<li>Contact</li>
-			</ul>
-		</div>
-	</header>
-
-	<main class="main">
-		<div class="upper">
-			<h1 class="main-title">The Road Ahead</h1>
-			<h2 class="main-subtitle">
-				The road ahead might be paved - it might not be.
-			</h2>
-		</div>
-		<img src="images/photo.jpg" class="photo" />
-		<div class="text">
-			<p class="paragraph">
-				Dark spruce forest frowned on either side the frozen waterway. The
+<?php
+$postId = $_GET['id'];
+$post = [
+	'id' => 1,
+	'title' => 'The Road Ahead',
+	'subtitle' => 'The road ahead might be paved - it might not be.',
+	'text' => 'Dark spruce forest frowned on either side the frozen waterway. The
 				trees had been stripped by a recent wind of their white covering of
 				frost, and they seemed to lean towards each other, black and ominous,
 				in the fading light. A vast silence reigned over the land. The land
@@ -78,19 +51,57 @@
 				under it all they were men, penetrating the land of desolation and
 				mockery and silence, puny adventurers bent on colossal adventure,
 				pitting themselves against the might of a world as remote and alien
-				and pulseless as the abysses of space.
+				and pulseless as the abysses of space.',
+	'links' => '<li>Home</li>
+					<li>Categories</li>
+					<li>About</li>
+					<li>Contact</li>',
+];
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Post</title>
+	<link rel="stylesheet" href="static/styles/post-style.css" />
+</head>
+
+<body>
+	<header class="header">
+		<div class="header-navigation">
+			<img class="header-logo" src="static/images/logo_b.svg" />
+			<ul class="header-list">
+				<?= $post['links'] ?>
+			</ul>
+		</div>
+	</header>
+
+	<main class="main">
+		<div class="upper">
+			<h1 class="main-title">
+				<?= $post['title'], $post['id'] ?>
+			</h1>
+			<h2 class="main-subtitle">
+				<?= $post['subtitle'] ?>
+			</h2>
+		</div>
+		<img src="static/images/photo.jpg" class="photo" />
+		<div class="text">
+			<p class="paragraph">
+				<?= $post['text'] ?>
 			</p>
 		</div>
 	</main>
 
 	<footer class="footer">
 		<div class="footer-navigation">
-			<img src="images/logo_w.svg" class="footer-logo" />
+			<img src="static/images/logo_w.svg" class="footer-logo" />
 			<ul class="footer-list">
-				<li>Home</li>
-				<li>Categories</li>
-				<li>About</li>
-				<li>Contact</li>
+				<?= $post['links'] ?>
 			</ul>
 		</div>
 	</footer>

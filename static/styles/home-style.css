@@ -154,14 +154,14 @@
   max-width: 460px;
   max-height: 280px;
   flex-grow: 1;
-  background: url("../images/f_item1.png");
+  background: url("../images/polar.jpg");
   background-size: cover;
 }
 
 .featured-content__item2 {
   max-width: 460px;
   max-height: 280px;
-  background: url("../images/f_item2.png");
+  background: url("../images/fire.png");
   background-size: cover;
   flex-grow: 1;
 }
@@ -293,42 +293,6 @@
   flex-grow: 1;
 }
 
-.recent_image1 {
-  background-image: url("../images/r_item1.png");
-  background-size: cover;
-  padding-top: 150px;
-}
-
-.recent_image2 {
-  background-image: url("../images/r_item2.png");
-  background-size: cover;
-  padding-top: 150px;
-}
-
-.recent_image3 {
-  background-image: url("../images/r_item3.png");
-  background-size: cover;
-  padding-top: 150px;
-}
-
-.recent_image4 {
-  background-image: url("../images/r_item4.png");
-  background-size: cover;
-  padding-top: 150px;
-}
-
-.recent_image5 {
-  background-image: url("../images/r_item5.png");
-  background-size: cover;
-  padding-top: 150px;
-}
-
-.recent_image6 {
-  background-image: url("../images/r_item6.png");
-  background-size: cover;
-  padding-top: 150px;
-}
-
 .recent-item__description {
   height: 93px;
   border-top: solid 1px;
@@ -359,6 +323,12 @@
   color: rgba(122, 122, 122, 1);
 }
 
+.item__image {
+  max-width: 296px;
+  max-height: 150px;
+  width: 100%;
+}
+
 .recent-item__autor {
   display: flex;
   justify-content: center;
@@ -383,6 +353,8 @@
 
 .item-autor__avatar {
   padding: 5px 10px 4px 0;
+  max-width: 26px;
+  max-height: 26px;
 }
 
 .recent-autor_date {

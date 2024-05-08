@@ -60,7 +60,7 @@ function saveFile(string $file, string $data): void
 }
 
 
-function savePostImage(string $imageBase64)
+function savePostImage(string $imageBase64): void
 {
 	$imageBase64Array = explode(';base64,', $imageBase64);
 	$imgExtention = str_replace('data:image/', '', $imageBase64Array[0]);
@@ -68,7 +68,7 @@ function savePostImage(string $imageBase64)
 	saveFile("static/images/myNewPost.{$imgExtention}", $imageDecoded);
 }
 
-function saveAuthorImage(string $imageBase64)
+function saveAuthorImage(string $imageBase64): void
 {
 	$imageBase64Array = explode(';base64,', $imageBase64);
 	$imgExtention = str_replace('data:image/', '', $imageBase64Array[0]);

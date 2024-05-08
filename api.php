@@ -59,21 +59,17 @@ function saveFile(string $file, string $data): void
 	}
 }
 
-
-function savePostImage(string $imageBase64): void
+function saveImage(string $imageBase64, bool $is_author): void
 {
 	$imageBase64Array = explode(';base64,', $imageBase64);
 	$imgExtention = str_replace('data:image/', '', $imageBase64Array[0]);
 	$imageDecoded = base64_decode($imageBase64Array[1]);
-	saveFile("static/images/myNewPost.{$imgExtention}", $imageDecoded);
-}
+	if ($is_author) {
+		saveFile("static/images/authorNew.{$imgExtention}", $imageDecoded);
+	} else {
+		saveFile("static/images/myNewPost.{$imgExtention}", $imageDecoded);
+	}
 
-function saveAuthorImage(string $imageBase64): void
-{
-	$imageBase64Array = explode(';base64,', $imageBase64);
-	$imgExtention = str_replace('data:image/', '', $imageBase64Array[0]);
-	$imageDecoded = base64_decode($imageBase64Array[1]);
-	saveFile("static/images/authorNew.{$imgExtention}", $imageDecoded);
 }
 
 function addPost(array $dataAsArray, $conn): void
@@ -102,8 +98,8 @@ $dataAsJson = file_get_contents("php://input");
 $dataAsArray = json_decode($dataAsJson, true);
 
 if ($dataAsJson != null) {
-	savePostImage($dataAsArray['image_post']);
-	saveAuthorImage($dataAsArray['author_image']);
+	saveImage($dataAsArray['image_post'], 0);
+	saveImage($dataAsArray['author_image'], 1);
 	addPost($dataAsArray, $conn);
 }
 

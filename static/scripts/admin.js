@@ -3,33 +3,23 @@ const authorPhotoView = document.getElementById("upload-preview__author-photo");
 const inputHeroPhoto = document.getElementById("hero-photo");
 const heroPhotoView = document.getElementById("upload-preview__hero-photo");
 const inputHeroSmallPhoto = document.getElementById("hero-photo--small");
-const heroSmallPhotoView = document.getElementById(
+const heroPhotoSmallView = document.getElementById(
   "upload-preview__hero-photo--small"
 );
 
 inputAuthorPhoto.addEventListener("change", function () {
-  uploadAuthorImage();
+  uploadImage(inputAuthorPhoto, authorPhotoView);
 });
 
 inputHeroPhoto.addEventListener("change", function () {
-  uploadHeroImage();
+  uploadImage(inputHeroPhoto, heroPhotoView);
 });
 
 inputHeroSmallPhoto.addEventListener("change", function () {
-  uploadSmallHeroImage();
+  uploadImage(inputHeroSmallPhoto, heroPhotoSmallView);
 });
 
-function uploadAuthorImage() {
-  let imgLink = URL.createObjectURL(inputAuthorPhoto.files[0]);
-  authorPhotoView.style.backgroundImage = `url(${imgLink})`;
-}
-
-function uploadHeroImage() {
-  let imgLink = URL.createObjectURL(inputHeroPhoto.files[0]);
-  heroPhotoView.style.backgroundImage = `url(${imgLink})`;
-}
-
-function uploadSmallHeroImage() {
-  let imgLink = URL.createObjectURL(inputHeroSmallPhoto.files[0]);
-  heroSmallPhotoView.style.backgroundImage = `url(${imgLink})`;
+function uploadImage(inputPhoto, PhotoView) {
+  let imgLink = URL.createObjectURL(inputPhoto.files[0]);
+  PhotoView.style.backgroundImage = `url(${imgLink})`;
 }

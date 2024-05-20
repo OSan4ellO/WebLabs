@@ -113,6 +113,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 965px;
 }
 
 .input__type {
@@ -126,6 +127,7 @@ html {
   line-height: 16px;
   text-align: left;
   color: rgba(122, 122, 122, 1);
+  margin-bottom: 5px;
 }
 
 .input-box {
@@ -188,13 +190,8 @@ html {
   margin-left: 16px;
 }
 
-#hero-photo--view,
-#hero-photo--view--small {
-  height: 100%;
-}
-
-#hero-photo--view,
-#hero-photo--view--small {
+#upload-preview__hero-photo,
+#upload-preview__hero-photo--small {
   width: 560px;
   height: 160px;
   border: 1px dashed rgba(211, 211, 211, 1);
@@ -205,6 +202,6 @@ html {
   background-position: center;
 }
 
-#hero-photo--view--small {
+#upload-preview__hero-photo--small {
   max-width: 300px;
 }

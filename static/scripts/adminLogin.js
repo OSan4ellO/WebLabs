@@ -51,7 +51,6 @@ function errorHandler() {
     emailInput.style.borderBottom = "1px solid rgba(232, 105, 97, 1)";
   }
   if (passwordInput.value) {
-    // на значение проверка
     document.getElementById("password__require").style.display = "none";
   } else {
     document.getElementById("password__require").style.display = "block";

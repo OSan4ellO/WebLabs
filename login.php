@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Menu</title>
     <link rel="stylesheet" href="/static/styles/login-style.css" />
-    <script src="admin.js" defer></script>
+    <script src="/static/scripts/adminLogin.js" defer></script>
   </head>
   <body class="main">
     <div class="main__logo">
@@ -14,10 +14,19 @@
     </div>
     <div class="main__login-form">
       <h2 class="login-form__title">Log In</h2>
+      <div id="error" class="error-block">
+        <img
+          class="error__image"
+          src="/static/images/alert-circle.svg"
+          alt="error"
+        />
+        <p id="error__status" class="error__text">Error</p>
+      </div>
       <div class="login-form__input-inf">
         <div class="input-inf__email">
           <p class="email__title">Email</p>
           <input class="email__input" type="email" id="emailInput" />
+          <p id="email__require">Email is required.</p>
         </div>
         <div class="input-inf__password">
           <p class="password__title">Password</p>
@@ -28,6 +37,7 @@
               src="static/images/eye-off.svg"
               alt="eye"
             />
+            <p id="password__require">Password is required.</p>
           </div>
         </div>
         <input

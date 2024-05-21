@@ -155,6 +155,13 @@ body {
   text-align: left;
 }
 
+.input-box:focus {
+  background-color: rgb(247, 247, 247);
+  outline: none;
+  border-bottom: 1px solid rgba(46, 46, 46, 1);
+  transition: background-color 0.35s ease;
+}
+
 .input__author-photo {
   max-width: 120px;
 }
@@ -186,7 +193,7 @@ body {
   height: 48px;
   background-image: url(../images/avatar_upload.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  border-radius: 50%;
 }
 
 .author-upload__button {
@@ -316,8 +323,10 @@ body {
 .content__photo {
   width: 408px;
   height: 160px;
-  background-color: rgba(247, 247, 247, 1);
+  background-image: url(../images/empty_post_page.svg);
   margin-top: 36px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .vertical-blur {
@@ -363,7 +372,9 @@ body {
 .content__photo-card {
   width: 296px;
   height: 150px;
-  background-color: rgba(247, 247, 247, 1);
+  background-image: url(../images/empty_post_page.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .card-description__title {
@@ -410,15 +421,15 @@ body {
   display: inline-block;
   width: 26px;
   height: 26px;
+  border-radius: 50%;
   background-image: url(../images/empty_photo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .author__name {
   display: inline-block;
   margin-left: 10px;
-}
-
-.author__name {
   font-family: Oxygen;
   font-size: 12px;
   font-weight: 400;

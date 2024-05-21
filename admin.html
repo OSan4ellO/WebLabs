@@ -102,7 +102,7 @@
                 <div class="input__date input__type">
                   <p class="date__text mini-text">Publish Date</p>
                   <input
-                    id="date-name"
+                    id="date"
                     class="date-name__block input-box"
                     type="date"
                   />
@@ -160,12 +160,17 @@
                     </div>
                     <div class="post-page__content">
                       <div class="content__text">
-                        <p class="post-page__title post__title">New Post</p>
-                        <p class="post-page__subtitle">
+                        <p
+                          id="title-preview"
+                          class="post-page__title post__title"
+                        >
+                          New Post
+                        </p>
+                        <p id="description-preview" class="post-page__subtitle">
                           Please, enter any description
                         </p>
                       </div>
-                      <div class="content__photo"></div>
+                      <div id="post-page__photo" class="content__photo"></div>
                     </div>
                   </div>
                   <div class="vertical-blur"></div>
@@ -176,7 +181,10 @@
                 <p class="post-card__text mini-text">Post card preview</p>
                 <div class="post-card__container">
                   <div class="post-card__content">
-                    <div class="content__photo-card"></div>
+                    <div
+                      id="card-page__photo"
+                      class="content__photo-card"
+                    ></div>
                     <div class="content__card-description">
                       <p class="card-description__title">New Post</p>
                       <p class="card-description__subtitle">
@@ -185,11 +193,16 @@
                     </div>
                     <div class="card__subcontent">
                       <div class="subcontent__author">
-                        <div class="author__photo"></div>
-                        <p class="author__name">Enter author name</p>
+                        <div
+                          id="author-photo__card"
+                          class="author__photo"
+                        ></div>
+                        <p id="author-name-preview" class="author__name">
+                          Enter author name
+                        </p>
                       </div>
                       <div class="subcontent__date">
-                        <p class="card-date">4/19/2023</p>
+                        <p id="date-preview" class="card-date">4/19/2023</p>
                       </div>
                     </div>
                   </div>

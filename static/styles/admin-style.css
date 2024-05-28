@@ -55,7 +55,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 65px auto 0 auto;
+  margin: 65px auto 32px auto;
 }
 
 .upper__title {
@@ -89,11 +89,48 @@ body {
   text-align: left;
 }
 
+.main__status {
+  display: flex;
+  align-items: center;
+  max-width: 1180px;
+  height: 44px;
+  border-radius: 5px;
+  border: 0px 0px 0px 2px;
+  margin: 0 auto 24px auto;
+
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+}
+
+.status__error {
+  background: rgba(255, 235, 234, 1);
+  border-left: 2px solid rgba(232, 105, 97, 1);
+}
+
+.status__success {
+  background-color: rgba(230, 252, 239, 1);
+  border-left: 2px solid rgba(103, 195, 140, 1);
+}
+
+#status__info {
+  display: inline-block;
+  margin-left: 10px;
+  font-family: Oxygen;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+}
+
+#status__icon {
+  margin-left: 12px;
+}
+
 .main__content {
-  margin: 32px auto 0 auto;
+  margin: 0 auto 0 auto;
   max-width: 1180px;
   height: 1135px;
   background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 6px 12px -10px rgba(0, 0, 0, 0.2);
 }
 
 .title__box {
@@ -162,30 +199,10 @@ body {
   transition: background-color 0.35s ease;
 }
 
-.input__author-photo {
-  max-width: 120px;
-}
-
-#author-photo--view {
-  border: none;
-  width: 560px;
-  height: 40px;
-  padding: 8px 4px 8px 4px;
-  border-radius: 5px 5px;
-  outline: none;
-  color: rgba(46, 46, 46, 1);
-  font-family: Oxygen;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: left;
-}
-
 #author-photo--view {
   display: flex;
   justify-content: start;
   align-items: center;
-  max-width: 120px;
 }
 
 #upload-preview__author-photo {
@@ -196,6 +213,20 @@ body {
   border-radius: 50%;
 }
 
+.author-photo__remove {
+  /* display: none; */
+  margin-left: 16px;
+}
+
+#avatar-place {
+  display: flex;
+}
+
+.author-photo__box {
+  display: flex;
+  align-items: center;
+}
+
 .author-upload__button {
   font-family: Oxygen;
   font-size: 16px;
@@ -203,7 +234,11 @@ body {
   line-height: 24px;
   text-align: center;
   color: rgba(46, 46, 46, 1);
-  margin-left: 16px;
+  margin-left: 8px;
+}
+
+.input__hero-photo--small {
+  max-width: 300px;
 }
 
 #upload-preview__hero-photo,
@@ -449,4 +484,39 @@ body {
   line-height: 35px;
   text-align: right;
   color: rgba(153, 153, 153, 1);
+}
+
+.isRequired {
+  margin-top: 5px;
+  font-family: Oxygen;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  color: rgba(232, 105, 97, 1);
+}
+
+.status_off {
+  display: none;
+}
+
+.input__error {
+  border-bottom: 1px solid rgba(232, 105, 97, 1);
+}
+
+.upload__button-author {
+  margin-left: 16px;
+}
+
+.remove__button-author {
+  /* display: none; */
+  margin-left: 8px;
+}
+
+.hero__buttons {
+  margin-top: 12px;
+}
+
+.remove__button-hero {
+  margin-left: 12px;
 }

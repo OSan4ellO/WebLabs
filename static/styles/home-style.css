@@ -14,7 +14,7 @@
 .navigation-section {
   display: flex;
   justify-content: space-between;
-  max-width: clamp(480px, 92vw, 940px);
+  max-width: clamp(400px, 92vw, 960px);
   max-height: 74px;
   margin: 0 auto;
   padding-top: 20px;
@@ -32,6 +32,14 @@
   text-align: left;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 1);
+}
+
+.menu__button {
+  display: none;
+}
+
+#menu {
+  display: none;
 }
 
 .main__container {
@@ -424,7 +432,7 @@
 }
 
 .footer-section {
-  max-width: clamp(480px, 92vw, 960px);
+  max-width: clamp(400px, 92vw, 960px);
   max-height: 34px;
   display: flex;
   justify-content: space-between;
@@ -498,6 +506,14 @@
   }
   .footer__button {
     padding: 18px 30px;
+  }
+
+  .header-navigation__links {
+    display: none;
+  }
+
+  .menu__button {
+    display: inline-block;
   }
 }
 

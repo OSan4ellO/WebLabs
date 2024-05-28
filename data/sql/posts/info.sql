@@ -1,4 +1,19 @@
-INSERT INTO post (title, subtitle, content, author, author_url, publish_date, image_url, featured, action) VALUES ('The Road Ahead', 'The road ahead might be paved - it might not be.', 'Dark spruce forest frowned on either side the frozen waterway. The
+INSERT INTO
+    post (
+        title,
+        subtitle,
+        content,
+        author,
+        author_url,
+        publish_date,
+        image_url,
+        featured,
+        action
+    )
+VALUES (
+        'The Road Ahead',
+        'The road ahead might be paved - it might not be.',
+        'Dark spruce forest frowned on either side the frozen waterway. The
 				trees had been stripped by a recent wind of their white covering of
 				frost, and they seemed to lean towards each other, black and ominous,
 				in the fading light. A vast silence reigned over the land. The land
@@ -45,14 +60,180 @@ INSERT INTO post (title, subtitle, content, author, author_url, publish_date, im
 				under it all they were men, penetrating the land of desolation and
 				mockery and silence, puny adventurers bent on colossal adventure,
 				pitting themselves against the might of a world as remote and alien
-				and pulseless as the abysses of space.', 'Mat Vogels', 'mat_avatar.png', FROM_UNIXTIME(1443128400), 'photo.jpg', 1, 'photography');
-INSERT INTO post (title, subtitle, content, author, author_url, publish_date, image_url, featured, action) VALUES ('From Top Down', 'Once a year, go someplace you`ve never been before.', '#', 'William Wong', 'william_avatar.png', FROM_UNIXTIME(1443128400),'#', 1, 'adventure');
+				and pulseless as the abysses of space.',
+        'Mat Vogels',
+        'mat_avatar.png',
+        FROM_UNIXTIME(1443128400),
+        'photo.jpg',
+        1,
+        'photography'
+    );
 
-INSERT INTO post (title, subtitle, content, author, author_url, publish_date, image_url, featured, action) VALUES ('Still Standing Tall', 'Life begins at the end of your comfort zone.', '#', 'William Wong', 'william_avatar.png', FROM_UNIXTIME(1443128400), '#', 0, '#');
-INSERT INTO post (title, subtitle, content, author, author_url, publish_date, image_url, featured, action) VALUES ('Sunny Side Up', 'No place is ever as bad as they tell you it`s going to be.', '#', 'Mat Vogels', 'mat_avatar.png', FROM_UNIXTIME(1443128400), '#', 0, '#');
-INSERT INTO post (title, subtitle, content, author, author_url, publish_date, image_url, featured, action) VALUES ('Water Falls', 'We travel not to escape life, but for life not to escape us.', '#', 'Mat Vogels', 'mat_avatar.png', FROM_UNIXTIME(1443128400), '#', 0, '#');
-INSERT INTO post (title, subtitle, content, author, author_url, publish_date, image_url, featured, action) VALUES ('Through the Mist', 'Travel makes you see what a tiny place you occupy in the world.', '#', 'William Wong', 'william_avatar.png', FROM_UNIXTIME(1443128400), '#', 0, '#');
-INSERT INTO post (title, subtitle, content, author, author_url, publish_date, image_url, featured, action) VALUES ('Awaken Early', 'Not all those who wander are lost.', '#', 'Mat Vogels', 'mat_avatar.png', FROM_UNIXTIME(1443128400), '#', 0, '#');
-INSERT INTO post (title, subtitle, content, author, author_url, publish_date, image_url, featured, action, nomer) VALUES ('Try it Always', 'The world is a book, and those who do not travel read only one page.','#', 'Mat Vogels', 'mat_avatar.png', FROM_UNIXTIME(1443128400), '#', 0, '#', '22');
+INSERT INTO
+    post (
+        title,
+        subtitle,
+        content,
+        author,
+        author_url,
+        publish_date,
+        image_url,
+        featured,
+        action
+    )
+VALUES (
+        'From Top Down',
+        'Once a year, go someplace you`ve never been before.',
+        '#',
+        'William Wong',
+        'william_avatar.png',
+        FROM_UNIXTIME(1443128400),
+        '#',
+        1,
+        'adventure'
+    );
 
+INSERT INTO
+    post (
+        title,
+        subtitle,
+        content,
+        author,
+        author_url,
+        publish_date,
+        image_url,
+        featured,
+        action
+    )
+VALUES (
+        'Still Standing Tall',
+        'Life begins at the end of your comfort zone.',
+        '#',
+        'William Wong',
+        'william_avatar.png',
+        FROM_UNIXTIME(1443128400),
+        '#',
+        0,
+        '#'
+    );
 
+INSERT INTO
+    post (
+        title,
+        subtitle,
+        content,
+        author,
+        author_url,
+        publish_date,
+        image_url,
+        featured,
+        action
+    )
+VALUES (
+        'Sunny Side Up',
+        'No place is ever as bad as they tell you it`s going to be.',
+        '#',
+        'Mat Vogels',
+        'mat_avatar.png',
+        FROM_UNIXTIME(1443128400),
+        '#',
+        0,
+        '#'
+    );
+
+INSERT INTO
+    post (
+        title,
+        subtitle,
+        content,
+        author,
+        author_url,
+        publish_date,
+        image_url,
+        featured,
+        action
+    )
+VALUES (
+        'Water Falls',
+        'We travel not to escape life, but for life not to escape us.',
+        '#',
+        'Mat Vogels',
+        'mat_avatar.png',
+        FROM_UNIXTIME(1443128400),
+        '#',
+        0,
+        '#'
+    );
+
+INSERT INTO
+    post (
+        title,
+        subtitle,
+        content,
+        author,
+        author_url,
+        publish_date,
+        image_url,
+        featured,
+        action
+    )
+VALUES (
+        'Through the Mist',
+        'Travel makes you see what a tiny place you occupy in the world.',
+        '#',
+        'William Wong',
+        'william_avatar.png',
+        FROM_UNIXTIME(1443128400),
+        '#',
+        0,
+        '#'
+    );
+
+INSERT INTO
+    post (
+        title,
+        subtitle,
+        content,
+        author,
+        author_url,
+        publish_date,
+        image_url,
+        featured,
+        action
+    )
+VALUES (
+        'Awaken Early',
+        'Not all those who wander are lost.',
+        '#',
+        'Mat Vogels',
+        'mat_avatar.png',
+        FROM_UNIXTIME(1443128400),
+        '#',
+        0,
+        '#'
+    );
+
+INSERT INTO
+    post (
+        title,
+        subtitle,
+        content,
+        author,
+        author_url,
+        publish_date,
+        image_url,
+        featured,
+        action,
+    )
+VALUES (
+        'Try it Always',
+        'The world is a book, and those who do not travel read only one page.',
+        '#',
+        'Mat Vogels',
+        'mat_avatar.png',
+        FROM_UNIXTIME(1443128400),
+        '#',
+        0,
+        '#',
+        '22'
+    );

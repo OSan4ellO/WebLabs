@@ -3,11 +3,13 @@ const postData = {
   subtitle: "",
   content: "",
   author: "",
-  author_url: "",
+  author_url: "authorNew.jpg",
+  author_image: "",
   publish_date: "",
-  image_url: "",
-  image_post: "",
+  image_url: "myNewPost.jpg",
   featured: 0,
+  action: "#",
+  image_post: "",
 };
 const inputAuthorPhoto = document.getElementById("author-photo");
 const authorPhotoView = document.getElementById("upload-preview__author-photo");
@@ -63,13 +65,13 @@ inputAuthorPhoto.addEventListener("change", function () {
     inputAuthorPhoto,
     authorPhotoView,
     authorPhotoPreView,
-    "author_url"
+    "author_image"
   );
   addButtonsToAuthor();
 });
 
 inputHeroPhoto.addEventListener("change", function () {
-  uploadImage(inputHeroPhoto, heroPhotoView, postPagePhoto, "image_url");
+  uploadImage(inputHeroPhoto, heroPhotoView, postPagePhoto, "image_post");
   addButtonsToHero();
 });
 
@@ -77,8 +79,8 @@ inputHeroSmallPhoto.addEventListener("change", function () {
   uploadImage(
     inputHeroSmallPhoto,
     heroPhotoSmallView,
-    postCardPhoto,
-    "image_post"
+    postCardPhoto
+    //  "image_post"
   );
   addButtonsToHeroSmall();
 });
@@ -197,7 +199,7 @@ authorNameInput.addEventListener("input", function () {
 dateInput.addEventListener("input", function () {
   displayInput(dateInput, dateOutput);
   changeColor(dateInput);
-  postData.publish_date = dateInput.valueAsDate;
+  postData.publish_date = dateInput.value;
 });
 
 subcontentInput.addEventListener("input", function () {
@@ -256,10 +258,8 @@ function highlightEmptyFields() {
 }
 
 function sendData() {
-  //console.log(postData)
-  var json = JSON.stringify(postData);
-  //console.log(json)
-  fetch("api.php", {
+  const json = JSON.stringify(postData);
+  fetch("http://localhost:8080/api.php", {
     method: "POST",
     body: json,
   })
@@ -268,6 +268,7 @@ function sendData() {
       console.log("ok");
     })
     .catch(function (error) {
+      console.log("error");
       //...
     });
 }

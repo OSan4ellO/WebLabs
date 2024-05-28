@@ -28,6 +28,10 @@ include 'api.php';
 					<li>About</li>
 					<li>Contact</li>
 				</ul>
+				<label for="menu" class="menu__button">
+					<img src="/static/images/menu_button.png" alt=menuIcon">
+				</label>
+				<input type="checkbox" id="menu">
 			</nav>
 		</header>
 

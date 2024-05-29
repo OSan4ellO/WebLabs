@@ -23,68 +23,6 @@ const heroPhotoSmallView = document.getElementById(
 const postPagePhoto = document.getElementById("post-page__photo");
 const postCardPhoto = document.getElementById("card-page__photo");
 
-document
-  .getElementById("upload-new-button")
-  .addEventListener("click", function () {
-    document.getElementById("hero-photo").click();
-  });
-
-document
-  .getElementById("upload-new-button--small")
-  .addEventListener("click", function () {
-    document.getElementById("hero-photo--small").click();
-  });
-
-function readFileAsBase64(file, onload) {
-  const reader = new FileReader();
-  reader.addEventListener(
-    "load",
-    () => {
-      onload(reader.result);
-    },
-    false
-  );
-  reader.readAsDataURL(file);
-}
-
-function uploadImage(inputPhoto, photoView, photoPreview, property) {
-  const file = inputPhoto.files[0];
-  if (file) {
-    readFileAsBase64(file, (imgLink) => {
-      postData[property] = imgLink;
-      photoView.style.backgroundImage = `url(${imgLink})`;
-      photoView.style.backgroundSize = "cover";
-      photoPreview.style.backgroundImage = `url(${imgLink})`;
-      photoPreview.style.backgroundSize = "cover";
-    });
-  }
-}
-
-inputAuthorPhoto.addEventListener("change", function () {
-  uploadImage(
-    inputAuthorPhoto,
-    authorPhotoView,
-    authorPhotoPreView,
-    "author_image"
-  );
-  addButtonsToAuthor();
-});
-
-inputHeroPhoto.addEventListener("change", function () {
-  uploadImage(inputHeroPhoto, heroPhotoView, postPagePhoto, "image_post");
-  addButtonsToHero();
-});
-
-inputHeroSmallPhoto.addEventListener("change", function () {
-  uploadImage(
-    inputHeroSmallPhoto,
-    heroPhotoSmallView,
-    postCardPhoto
-    //  "image_post"
-  );
-  addButtonsToHeroSmall();
-});
-
 function addButtonsToAuthor() {
   if (inputAuthorPhoto.value !== "") {
     document.querySelector(".upload__button-author").src =
@@ -149,6 +87,63 @@ function deletePreviewImage() {
   postCardPhoto.style.backgroundImage = "";
 }
 
+function readFileAsBase64(file, onload) {
+  const reader = new FileReader();
+  reader.addEventListener(
+    "load",
+    () => {
+      onload(reader.result);
+    },
+    false
+  );
+  reader.readAsDataURL(file);
+}
+
+function uploadImage(inputPhoto, photoView, photoPreview, property) {
+  const file = inputPhoto.files[0];
+  if (file) {
+    readFileAsBase64(file, (imgLink) => {
+      postData[property] = imgLink;
+      photoView.style.backgroundImage = `url(${imgLink})`;
+      photoView.style.backgroundSize = "cover";
+      photoPreview.style.backgroundImage = `url(${imgLink})`;
+      photoPreview.style.backgroundSize = "cover";
+    });
+  }
+}
+
+document
+  .getElementById("upload-new-button")
+  .addEventListener("click", function () {
+    document.getElementById("hero-photo").click();
+  });
+
+document
+  .getElementById("upload-new-button--small")
+  .addEventListener("click", function () {
+    document.getElementById("hero-photo--small").click();
+  });
+
+inputAuthorPhoto.addEventListener("change", function () {
+  uploadImage(
+    inputAuthorPhoto,
+    authorPhotoView,
+    authorPhotoPreView,
+    "author_image"
+  );
+  addButtonsToAuthor();
+});
+
+inputHeroPhoto.addEventListener("change", function () {
+  uploadImage(inputHeroPhoto, heroPhotoView, postPagePhoto, "image_post");
+  addButtonsToHero();
+});
+
+inputHeroSmallPhoto.addEventListener("change", function () {
+  uploadImage(inputHeroSmallPhoto, heroPhotoSmallView, postCardPhoto);
+  addButtonsToHeroSmall();
+});
+
 document.querySelector(".remove__button-author").onclick = deleteAuthorImage;
 document.querySelectorAll(".remove__button-hero")[0].onclick = deletePostImage;
 document.querySelectorAll(".remove__button-hero")[1].onclick =
@@ -212,27 +207,6 @@ subcontentInput.addEventListener("input", function () {
 const submitButton = document.getElementById("publish-button");
 const formData = document.getElementById("inputData");
 
-formData.addEventListener("submit", function (event) {
-  event.preventDefault();
-  const mainStatus = document.querySelector(".main__status");
-  const statusText = document.getElementById("status__info");
-  const statusIcon = document.getElementById("status__icon");
-  document.querySelector(".main__status").classList.remove("status_off");
-  if (checkFieldsNotEmpty()) {
-    mainStatus.classList.remove("status__error");
-    statusText.textContent = "Publish Complete!";
-    mainStatus.classList.add("status__success");
-    statusIcon.src = "/static/images/check-circle.svg";
-    sendData();
-  } else {
-    mainStatus.classList.remove("status__success");
-    statusText.textContent = "Whoops! Some fields need your attention :o";
-    mainStatus.classList.add("status__error");
-    statusIcon.src = "/static/images/alert-circle.svg";
-    highlightEmptyFields();
-  }
-});
-
 function checkFieldsNotEmpty() {
   let inputs = document.querySelectorAll("input");
   for (let input of inputs) {
@@ -272,3 +246,26 @@ function sendData() {
       //...
     });
 }
+
+function onButtonSubmit(event) {
+  event.preventDefault();
+  const mainStatus = document.querySelector(".main__status");
+  const statusText = document.getElementById("status__info");
+  const statusIcon = document.getElementById("status__icon");
+  document.querySelector(".main__status").classList.remove("status_off");
+  if (checkFieldsNotEmpty()) {
+    mainStatus.classList.remove("status__error");
+    statusText.textContent = "Publish Complete!";
+    mainStatus.classList.add("status__success");
+    statusIcon.src = "/static/images/check-circle.svg";
+    sendData();
+  } else {
+    mainStatus.classList.remove("status__success");
+    statusText.textContent = "Whoops! Some fields need your attention :o";
+    mainStatus.classList.add("status__error");
+    statusIcon.src = "/static/images/alert-circle.svg";
+    highlightEmptyFields();
+  }
+}
+
+formData.addEventListener("submit", onButtonSubmit);

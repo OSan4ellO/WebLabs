@@ -18,6 +18,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .main__logo {
@@ -36,7 +37,9 @@
 
 .main__login-form {
   max-width: 480px;
+  min-width: 420px;
   height: 560px;
+  max-height: 560px;
   background-color: rgba(255, 255, 255, 1);
   flex-grow: 1;
   border-radius: 3px;
@@ -52,12 +55,22 @@
 }
 
 .error-block {
-  display: none; /* none -> flex при invalid*/
+  display: none;
   background-color: rgba(255, 235, 234, 1);
   border-left: 2px solid rgba(232, 105, 97, 1);
   max-width: 440px;
   border-radius: 5px;
-  margin: 40px;
+  margin: 0px 40px 0 40px;
+  transition: height 0.3s ease, margin-top 0.3s ease;
+}
+
+.error__expanded {
+  height: 48px;
+  margin-top: 40px;
+}
+
+.error__hidden {
+  height: 0;
 }
 
 .error__image {
@@ -107,7 +120,6 @@
 }
 
 #email__require {
-  display: none;
   margin-top: 5px;
   font-family: Oxygen;
   font-size: 12px;
@@ -147,7 +159,6 @@
 }
 
 #password__require {
-  display: none;
   margin-top: 5px;
   font-family: Oxygen;
   font-size: 12px;
@@ -170,6 +181,16 @@
   outline: none;
   border-bottom: 1px solid rgba(46, 46, 46, 1);
   transition: background-color 0.35s ease;
+}
+
+.status__empty {
+  border-bottom: 1px solid rgba(232, 105, 97, 1);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.status__fill {
+  border-bottom: 1px solid rgba(46, 46, 46, 1);
+  background-color: rgb(247, 247, 247);
 }
 
 .input-inf__button {
@@ -197,4 +218,21 @@
 .input-inf__button:active {
   outline: none;
   background-color: rgb(195, 120, 63, 1);
+}
+
+.status__off {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+  #password__button {
+    margin-left: 312px;
+  }
+
+  input {
+    max-width: 340px;
+  }
 }

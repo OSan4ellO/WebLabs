@@ -210,7 +210,7 @@ const formData = document.getElementById("inputData");
 function checkFieldsNotEmpty() {
   let inputs = document.querySelectorAll("input");
   for (let input of inputs) {
-    if (!input.value || subcontentInput.value == "") {
+    if (!input.value || !subcontentInput.value) {
       return false;
     }
   }
@@ -247,7 +247,7 @@ function sendData() {
     });
 }
 
-function onButtonSubmit(event) {
+formData.addEventListener("submit", function (event) {
   event.preventDefault();
   const mainStatus = document.querySelector(".main__status");
   const statusText = document.getElementById("status__info");
@@ -266,6 +266,4 @@ function onButtonSubmit(event) {
     statusIcon.src = "/static/images/alert-circle.svg";
     highlightEmptyFields();
   }
-}
-
-formData.addEventListener("submit", onButtonSubmit);
+});

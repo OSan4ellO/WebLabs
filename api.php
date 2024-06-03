@@ -102,7 +102,6 @@ if ($dataAsJson != null) {
 	saveImage($dataAsArray['author_image'], 1);
 	addPost($dataAsArray, $conn);
 }
-
 closeDBConnection($conn);
 
 ?>
